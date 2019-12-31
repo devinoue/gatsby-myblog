@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Ghost',
-    description: 'The professional publishing platform',
+    title: 'Code it down',
+    description: 'Webエンジニアの備忘録',
     siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
   },
   mapping: {
