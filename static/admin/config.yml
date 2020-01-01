@@ -12,18 +12,13 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-     preview: false
+     preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Layout", name: "layout", widget: "string" ,default: "post"}
-      - { label: "Auther", name: "author", widget: "string" ,default: "Masaharu Inoue"}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - label: "Tags"
         name: "tags"
         widget: "list"
         default: ["Etc"]
-
       - label: "Image"
         name: "image"
         widget: "image"
@@ -32,3 +27,9 @@ collections:
           config:
             multiple: true
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "string" ,default: "post"}
+      - { label: "Auther", name: "author", widget: "string" ,default: "Masaharu Inoue"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+
+
