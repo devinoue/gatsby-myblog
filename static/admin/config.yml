@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: /src/content/img
+media_folder: /content/img
 public_folder: /src/content/img
 
 collections:
