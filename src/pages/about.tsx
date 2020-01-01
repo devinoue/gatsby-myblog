@@ -37,9 +37,8 @@ const About: React.FC = () => (
           <PostFullContent className="post-full-content">
             <div className="post-content">
               <p>
-                現在岐阜在住のWebエンジニア。<br />
-                趣味は心理学、特に知能研究分野について調べています。<br />
-                このブログ自体はReact/Gatsby.js + NetlifyCMSを利用していますが、<br />
+                岐阜在住のWebエンジニア。<br />
+                このブログはReact/Gatsby.js + NetlifyCMSを利用していますが、<br />
                 業務ではVue/Nuxt/Serverless/AWS Lambda Functionをいじっています。
                 <br />
                 個人開発では主にLaravel + Nuxtを使っています。<br />
