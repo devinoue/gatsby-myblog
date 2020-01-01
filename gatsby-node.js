@@ -42,8 +42,23 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ node, graphql, actions }) => {
   const { createPage } = actions;
+
+  // const { frontmatter } = node;
+  // if (frontmatter) {
+  //   const { image } = frontmatter;
+  //   if (image) {
+  //     if (image.indexOf('/img') === 0) {
+  //       frontmatter.image = image.slice(1);
+  //     }
+  //   }
+  //   console.log("ffffffffffffffffffffffff");
+  //   console.log(image);
+  // } else {
+  //   console.log("sssssssssssssssssss");
+  // }
+
 
   const result = await graphql(`
     {

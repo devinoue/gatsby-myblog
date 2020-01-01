@@ -10,8 +10,9 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
-  'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sitemap',
+
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -19,11 +20,18 @@ module.exports = {
         name: 'content',
         path: path.join(__dirname, 'src', 'content'),
       },
+
     },
+
+    // Including in your Gatsby plugins will transform any paths in your frontmatter
+    `gatsby-plugin-netlify-cms-paths`,
+
+
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
@@ -44,6 +52,7 @@ module.exports = {
         ],
       },
     },
+
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-canonical-urls',
@@ -61,6 +70,13 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'image',
+        path: path.join(__dirname, 'src', 'content', 'img'),
       },
     },
     {
