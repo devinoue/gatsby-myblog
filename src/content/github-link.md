@@ -1,12 +1,12 @@
 ---
-layout: post
 title: 初投稿
-image: img/callum-shaw-555357-unsplash.jpg
+layout: post
 author: Masaharu Inoue
 date: 2020-01-01T10:00:00.000Z
 draft: false
 tags:
-  - Etc
+  - Etc ttt
+image: /img/alex-knight-326705-unsplash.jpg
 ---
 
 ひとまず初投稿です。
