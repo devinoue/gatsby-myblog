@@ -1,10 +1,11 @@
 const path = require('path');
-var netlifyCmsPaths = {
+const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
     cmsConfig: `/static/admin/config.yml`,
   },
-}
+};
+
 module.exports = {
   siteMetadata: {
     title: 'Code it down',
@@ -15,7 +16,7 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
+
     'gatsby-plugin-sitemap',
     netlifyCmsPaths,
     'gatsby-plugin-sharp',
@@ -27,9 +28,13 @@ module.exports = {
       },
 
     },
-
-
-
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'images',
+      },
+    },
 
     {
       resolve: 'gatsby-transformer-remark',
@@ -77,13 +82,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'image',
-        path: path.join(__dirname, 'src', 'content', 'img'),
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-XXXX-Y',
@@ -101,5 +99,6 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+    'gatsby-plugin-netlify-cms',
   ],
 };
