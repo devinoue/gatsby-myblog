@@ -6,7 +6,7 @@ date: 2020-01-01T10:00:00.000Z
 draft: false
 tags:
   - Etc ttt
-image: /img/alex-knight-326705-unsplash.jpg
+image: img/alex-knight-326705-unsplash.jpg
 ---
 
 ひとまず初投稿です。
