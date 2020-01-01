@@ -1,5 +1,10 @@
 const path = require('path');
-
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
 module.exports = {
   siteMetadata: {
     title: 'Code it down',
@@ -12,7 +17,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sitemap',
-
+    netlifyCmsPaths,
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -23,15 +28,14 @@ module.exports = {
 
     },
 
-    // Including in your Gatsby plugins will transform any paths in your frontmatter
-    `gatsby-plugin-netlify-cms-paths`,
+
 
 
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          `gatsby-plugin-netlify-cms-paths`,
+          netlifyCmsPaths,
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
